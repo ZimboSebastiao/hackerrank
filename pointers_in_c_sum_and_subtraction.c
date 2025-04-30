@@ -3,10 +3,21 @@
 void update(int *a,int *b) {
     // Complete this function  
    
-    int temp = *a;  
-
-    *a = temp + *b;
-    *b = *b - temp;
+    int sum;  
+    int diff;
+    
+    sum = *a + *b;
+    
+    if (*a > *b)
+    {
+        diff = *a - *b;
+    }
+    else {
+        diff = *b - *a;
+    }
+    
+    *a = sum;
+    *b = diff;
 } 
 
 int main() {
